@@ -1,10 +1,9 @@
 ---
 description: Fix linting, type errors, and build issues
-agent: build
+agent: general
 ---
 
-Check for linting errors:
-!`npm run lint 2>&1 || echo "Lint script not found"`
+Check for linting errors: !`npm run lint 2>&1 || echo "Lint script not found"`
 
 Check for type errors:
 !`npm run typecheck 2>&1 || npx tsc --noEmit 2>&1 || echo "TypeScript not configured"`

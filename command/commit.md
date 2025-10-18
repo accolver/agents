@@ -1,28 +1,27 @@
 ---
 description: Review changes and create a commit
-agent: build
+agent: general
 ---
 
-Status of changes:
-!`git status`
+Status of changes: !`git status`
 
 Current staged changes:
 !`git diff --cached 2>&1 || echo "No staged changes. Stage files first with 'git add'"`
 
-Current unstaged changes:
-!`git diff 2>&1`
+Current unstaged changes: !`git diff 2>&1`
 
-Recent commits for context:
-!`git log --oneline -5 2>&1`
+Recent commits for context: !`git log --oneline -5 2>&1`
 
 If there are no staged changes, ask the user what files they want to commit.
 
 Otherwise:
 
-1. Review the staged changes. Identify only the relevant changes that were recently discussed
+1. Review the staged changes. Identify only the relevant changes that were
+   recently discussed
 2. Ensure no sensitive data or secrets are about to be committed
 3. Summarize what was changed and why
-4. Suggest a clear, descriptive commit message following conventional commits format:
+4. Suggest a clear, descriptive commit message following conventional commits
+   format:
    - feat: new feature
    - fix: bug fix
    - docs: documentation changes

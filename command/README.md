@@ -1,6 +1,8 @@
 # OpenCode Commands Collection
 
-A comprehensive collection of useful custom commands for common development tasks. These commands work with [OpenCode](https://opencode.ai) to streamline your workflow.
+A comprehensive collection of useful custom commands for common development
+tasks. These commands work with [OpenCode](https://opencode.ai) to streamline
+your workflow.
 
 ## 📋 Overview
 
@@ -448,14 +450,12 @@ Create a markdown file in `~/.config/opencode/command/`:
 ```markdown
 ---
 description: Your command description
-agent: build
+agent: general
 model: anthropic/claude-3-5-sonnet-20241022
 ---
 
-Your command prompt here.
-Use $ARGUMENTS for user input.
-Use !`shell command` for shell output.
-Use @filename for file references.
+Your command prompt here. Use $ARGUMENTS for user input. Use !`shell command`
+for shell output. Use @filename for file references.
 ```
 
 ### Modifying Existing Commands
@@ -491,6 +491,7 @@ agent: component-implementation
 ---
 
 Create a new React component called $ARGUMENTS with:
+
 - TypeScript types
 - Props interface
 - Proper styling
@@ -504,8 +505,8 @@ Create a new React component called $ARGUMENTS with:
 description: Explain code
 ---
 
-Explain the code in @$ARGUMENTS
-Include:
+Explain the code in @$ARGUMENTS Include:
+
 - What it does
 - How it works
 - Why it's structured this way
@@ -574,7 +575,8 @@ Have a useful command to share? Submit a PR with:
 
 ## 📝 License
 
-These commands are provided under the MIT License. Customize them for your needs!
+These commands are provided under the MIT License. Customize them for your
+needs!
 
 ---
 

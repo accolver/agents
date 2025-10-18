@@ -1,6 +1,6 @@
 ---
 description: Debug an issue or error
-agent: build
+agent: general
 ---
 
 Help me debug: $ARGUMENTS
