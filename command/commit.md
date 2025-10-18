@@ -1,6 +1,6 @@
 ---
 description: Review changes and create a commit
-agent: general
+agent: build
 ---
 
 Status of changes: !`git status`

@@ -1,6 +1,6 @@
 ---
 description: Fix linting, type errors, and build issues
-agent: general
+agent: build
 ---
 
 Check for linting errors: !`npm run lint 2>&1 || echo "Lint script not found"`
