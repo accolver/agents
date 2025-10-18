@@ -12,11 +12,12 @@ Current unstaged changes: !`git diff 2>&1`
 
 Recent commits for context: !`git log --oneline -5 2>&1`
 
-If there are no staged changes, ask the user what files they want to commit.
+If there are no staged changes, try to determine the relevant files from the previous conversation.
+If that's not possible, ask the user what files they want to commit.
 
 Otherwise:
 
-1. Review the staged changes. Identify only the relevant changes that were
+1. Review the new/staged changes. Identify only the relevant changes that were
    recently discussed
 2. Ensure no sensitive data or secrets are about to be committed
 3. Summarize what was changed and why
