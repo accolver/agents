@@ -21,7 +21,7 @@ Otherwise:
    recently discussed
 2. Ensure no sensitive data or secrets are about to be committed
 3. Summarize what was changed and why
-4. Suggest a clear, descriptive commit message following conventional commits
+4. Create a clear, descriptive commit message following conventional commits
    format:
    - feat: new feature
    - fix: bug fix
