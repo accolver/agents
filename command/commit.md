@@ -3,6 +3,8 @@ description: Review changes and create a commit
 agent: build
 ---
 
+Attempt to automatically commit the latest changes without the user's input
+
 Status of changes: !`git status`
 
 Current staged changes:
@@ -12,7 +14,7 @@ Current unstaged changes: !`git diff 2>&1`
 
 Recent commits for context: !`git log --oneline -5 2>&1`
 
-If there are no staged changes, try to determine the relevant files from the previous conversation.
+If there are no staged changes, look at the `git status` and try to determine the relevant files from the previous conversation.
 If that's not possible, ask the user what files they want to commit.
 
 Otherwise:
