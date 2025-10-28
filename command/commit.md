@@ -21,7 +21,7 @@ Otherwise:
 
 1. Review the new/staged changes
 2. Ensure no sensitive data or secrets are about to be committed
-3. Summarize what was changed and why
+3. Summarize what was changed and why. Emphasis WHY the change and less on WHAT was changed
 4. Create a clear, descriptive commit message following conventional commits
    format:
    - feat: new feature
