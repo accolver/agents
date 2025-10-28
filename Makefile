@@ -29,6 +29,16 @@ clean:
 # OpenCode installation
 install-opencode: build
 	@echo "Installing for OpenCode..."
+	@if [ -d ~/.config/opencode/agent/ ] && [ -n "$$(ls -A ~/.config/opencode/agent/ 2>/dev/null)" ]; then \
+		echo "Backing up existing agents to ~/.config/opencode/agent.backup/..."; \
+		mkdir -p ~/.config/opencode/agent.backup/; \
+		cp -r ~/.config/opencode/agent/* ~/.config/opencode/agent.backup/ 2>/dev/null || true; \
+	fi
+	@if [ -d ~/.config/opencode/command/ ] && [ -n "$$(ls -A ~/.config/opencode/command/ 2>/dev/null)" ]; then \
+		echo "Backing up existing commands to ~/.config/opencode/command.backup/..."; \
+		mkdir -p ~/.config/opencode/command.backup/; \
+		cp -r ~/.config/opencode/command/* ~/.config/opencode/command.backup/ 2>/dev/null || true; \
+	fi
 	@mkdir -p ~/.config/opencode/agent/
 	@mkdir -p ~/.config/opencode/command/
 	@cp build/opencode/agent/*.md ~/.config/opencode/agent/
@@ -40,6 +50,16 @@ install-opencode: build
 # Claude Code installation
 install-claude: build
 	@echo "Installing for Claude Code..."
+	@if [ -d ~/.claude/agents/ ] && [ -n "$$(ls -A ~/.claude/agents/ 2>/dev/null)" ]; then \
+		echo "Backing up existing agents to ~/.claude/agents.backup/..."; \
+		mkdir -p ~/.claude/agents.backup/; \
+		cp -r ~/.claude/agents/* ~/.claude/agents.backup/ 2>/dev/null || true; \
+	fi
+	@if [ -d ~/.claude/commands/ ] && [ -n "$$(ls -A ~/.claude/commands/ 2>/dev/null)" ]; then \
+		echo "Backing up existing commands to ~/.claude/commands.backup/..."; \
+		mkdir -p ~/.claude/commands.backup/; \
+		cp -r ~/.claude/commands/* ~/.claude/commands.backup/ 2>/dev/null || true; \
+	fi
 	@mkdir -p ~/.claude/agents/
 	@mkdir -p ~/.claude/commands/
 	@cp build/claude/agents/*.md ~/.claude/agents/
